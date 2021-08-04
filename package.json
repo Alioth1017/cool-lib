@@ -1,0 +1,34 @@
+{
+  "name": "@alioth_91/cool-lib",
+  "version": "0.0.1",
+  "description": "A modern JavaScript utility library delivering modularity, performance & extras.",
+  "main": "dist/bundle.umd.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alioth1017/cool-lib.git"
+  },
+  "keywords": [
+    "javascript",
+    "modules",
+    "utilities",
+    "cool-lib"
+  ],
+  "author": "Alioth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alioth1017/cool-lib/issues"
+  },
+  "homepage": "https://github.com/Alioth1017/cool-lib#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.55.1"
+  }
+}
