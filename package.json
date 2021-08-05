@@ -1,6 +1,6 @@
 {
   "name": "@alioth_91/cool-lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modern JavaScript utility library delivering modularity, performance & extras.",
   "main": "dist/cool-lib.js",
   "scripts": {
