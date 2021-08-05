@@ -5,14 +5,14 @@ import babel from "@rollup/plugin-babel";
 import json from "@rollup/plugin-json";
 import html from "@rollup/plugin-html";
 import multi from "@rollup/plugin-multi-entry";
-export default {
-  // 核心选项
-  input: ["./src/index.js"], // 必须
-  output:
-    // {
-    //   dir: "dist",
-    // },
-    [
+
+const plugins = [resolve(), commonjs(), babel(), json(), multi()];
+
+export default [
+  {
+    // 核心选项
+    input: ["./src/index.js"], // 必须
+    output: [
       {
         file: "./dist/cool-lib.es.js", // 必须
         format: "es", // 必须,
@@ -26,6 +26,22 @@ export default {
         name: "CoolLib",
       },
     ],
-  plugins: [resolve(), commonjs(), babel(), json(), html(), multi()],
-  // external: [ "xxx"], // 标注外部引用模块
-};
+    plugins: [html(), ...plugins],
+    // external: [ "xxx"], // 标注外部引用模块
+  },
+  {
+    input: ["./src/mediaPicture.js"],
+    output: [
+      {
+        file: "./dist/mediaPicture.es.js",
+        format: "es",
+      },
+      {
+        file: "./dist/mediaPicture.js",
+        format: "umd",
+        name: "mediaPicture",
+      },
+    ],
+    plugins,
+  },
+];
