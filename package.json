@@ -4,7 +4,9 @@
   "description": "A modern JavaScript utility library delivering modularity, performance & extras.",
   "main": "dist/cool-lib.js",
   "scripts": {
-    "build": "rollup --config rollup.config.js --watch"
+    "dev": "rollup --config rollup.config.js --watch",
+    "build": "rollup --config rollup.config.js",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
