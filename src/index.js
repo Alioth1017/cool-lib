@@ -1,1 +1,1 @@
-export * as mediaImage from './mediaImage.js';
+export * as mediaPicture from './mediaPicture.js';
